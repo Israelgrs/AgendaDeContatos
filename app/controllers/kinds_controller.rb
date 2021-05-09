@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class KindsController < ApplicationController
-  before_action :set_kind, only: %i[ show edit update destroy ]
+  before_action :set_kind, only: %i[show edit update destroy]
 
   # GET /kinds or /kinds.json
   def index
@@ -7,8 +9,7 @@ class KindsController < ApplicationController
   end
 
   # GET /kinds/1 or /kinds/1.json
-  def show
-  end
+  def show; end
 
   # GET /kinds/new
   def new
@@ -16,8 +17,7 @@ class KindsController < ApplicationController
   end
 
   # GET /kinds/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /kinds or /kinds.json
   def create
@@ -25,7 +25,7 @@ class KindsController < ApplicationController
 
     respond_to do |format|
       if @kind.save
-        format.html { redirect_to @kind, notice: "Kind was successfully created." }
+        format.html { redirect_to @kind, notice: 'Kind was successfully created.' }
         format.json { render :show, status: :created, location: @kind }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class KindsController < ApplicationController
   def update
     respond_to do |format|
       if @kind.update(kind_params)
-        format.html { redirect_to @kind, notice: "Kind was successfully updated." }
+        format.html { redirect_to @kind, notice: 'Kind was successfully updated.' }
         format.json { render :show, status: :ok, location: @kind }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,19 +51,20 @@ class KindsController < ApplicationController
   def destroy
     @kind.destroy
     respond_to do |format|
-      format.html { redirect_to kinds_url, notice: "Kind was successfully destroyed." }
+      format.html { redirect_to kinds_url, notice: 'Kind was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_kind
-      @kind = Kind.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def kind_params
-      params.require(:kind).permit(:description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_kind
+    @kind = Kind.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def kind_params
+    params.require(:kind).permit(:description)
+  end
 end

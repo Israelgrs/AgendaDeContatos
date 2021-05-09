@@ -1,21 +1,23 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class KindsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @kind = kinds(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get kinds_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_kind_url
     assert_response :success
   end
 
-  test "should create kind" do
+  test 'should create kind' do
     assert_difference('Kind.count') do
       post kinds_url, params: { kind: { description: @kind.description } }
     end
@@ -23,22 +25,22 @@ class KindsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to kind_url(Kind.last)
   end
 
-  test "should show kind" do
+  test 'should show kind' do
     get kind_url(@kind)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_kind_url(@kind)
     assert_response :success
   end
 
-  test "should update kind" do
+  test 'should update kind' do
     patch kind_url(@kind), params: { kind: { description: @kind.description } }
     assert_redirected_to kind_url(@kind)
   end
 
-  test "should destroy kind" do
+  test 'should destroy kind' do
     assert_difference('Kind.count', -1) do
       delete kind_url(@kind)
     end

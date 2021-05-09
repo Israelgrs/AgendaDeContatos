@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateKinds < ActiveRecord::Migration[6.1]
   def change
     create_table :kinds do |t|
