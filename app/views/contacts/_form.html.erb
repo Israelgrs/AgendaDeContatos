@@ -1,4 +1,4 @@
-<%= form_with(model: contact) do |form| %>
+<%= form_with(model: contact, html: { class: "basic-grey"}) do |form| %>
   <% if contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -33,5 +33,8 @@
 
   <div class="actions">
     <%= form.submit %>
+  </div>
+  <div>
+  <%= link_to 'Back', contacts_path %>
   </div>
 <% end %>
