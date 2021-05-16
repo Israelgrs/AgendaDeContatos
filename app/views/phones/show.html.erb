@@ -1,14 +1,16 @@
+<div class="basic-grey">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>Telefone:</strong>
   <%= @phone.Phone %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
+  <strong>Contato:</strong>
   <%= @phone.contact_id %>
 </p>
 
-<%= link_to 'Edit', edit_phone_path(@phone) %> |
-<%= link_to 'Back', phones_path %>
+<%= link_to 'Editar', edit_phone_path(@phone), class:"button" %> |
+<%= link_to 'Voltar', phones_path, class:"button" %>
+</div>

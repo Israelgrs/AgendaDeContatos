@@ -2,25 +2,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Street:</strong>
+  <strong>Rua:</strong>
   <%= @address.street %>
 </p>
 
 <p>
-  <strong>City:</strong>
+  <strong>Cidade:</strong>
   <%= @address.city %>
 </p>
 
 <p>
-  <strong>State:</strong>
+  <strong>Estado:</strong>
   <%= @address.state %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
+  <strong>Contato:</strong>
   <%= @address.contact_id %>
 </p>
 
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+<%= link_to 'Editar', edit_address_path(@address), class:"button" %> |
+<%= link_to 'Voltar', addresses_path, class:"button" %>
 </div>

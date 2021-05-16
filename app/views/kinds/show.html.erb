@@ -1,9 +1,11 @@
+<div class= "basic-grey">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descrição:</strong>
   <%= @kind.description %>
 </p>
 
-<%= link_to 'Edit', edit_kind_path(@kind) %> |
-<%= link_to 'Back', kinds_path %>
+<%= link_to 'Editar', edit_kind_path(@kind), class:"button" %> |
+<%= link_to 'Voltar', kinds_path, class:"button" %>
+</div>
