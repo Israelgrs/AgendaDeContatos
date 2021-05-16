@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Creating the table Addresses in Database
 class CreateAddresses < ActiveRecord::Migration[6.1]
   def change
     create_table :addresses do |t|

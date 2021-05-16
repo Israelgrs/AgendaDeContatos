@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class for the kinds controller
 class KindsController < ApplicationController
   before_action :set_kind, only: %i[show edit update destroy]
 

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# The class for the contacts Controller
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[show edit update destroy]
 

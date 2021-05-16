@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class of the Addrresses controller
 class AddressesController < ApplicationController
   before_action :set_address, only: %i[show edit update destroy]
 
