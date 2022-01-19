@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
@@ -13,10 +13,16 @@ gem 'mysql2', '~> 0.5'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application.
+gem 'jquery-rails', '~> 4.4'
+# Unobtrusive nested forms handling, using jQuery. Use this and discover cocoon-heaven.
+gem 'cocoon', '~> 1.2', '>= 1.2.15'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+# Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
 # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
 gem 'faker', '~> 1.6', '>= 1.6.6'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
