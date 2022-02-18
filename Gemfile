@@ -16,7 +16,7 @@ gem 'sass-rails', '>= 6'
 # This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application.
 gem 'jquery-rails', '~> 4.4'
 # Unobtrusive nested forms handling, using jQuery. Use this and discover cocoon-heaven.
-gem 'cocoon', '~> 1.2', '>= 1.2.15'
+gem 'cocoon'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
