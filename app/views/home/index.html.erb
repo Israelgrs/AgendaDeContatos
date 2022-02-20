@@ -1,13 +1,11 @@
 <div class="basic-grey">
-<div class="basic-grey h1"><h1>Agenda de contatos</h1></div>
-<div class="basic-grey .button ">
-<h2><%= t 'hello' %></h2>
-<h2><%= l Date.today %></h2>
-<ul>
-<li><%=link_to 'Contatos', contacts_path%></li>
-<li><%= link_to 'Tipos', kinds_path%></li>
-<li><%= link_to 'Endereços', addresses_path%></li>
-<li><%= link_to 'Telefone', phones_path%></li>
-</ul>
-</div>
+  <div class="basic-grey h1"><h1>Agenda de contatos</h1></div>
+    <div class="basic-grey .button ">
+      <ul>
+        <li><%=link_to 'Contatos', contacts_path%></li>
+        <li><%= link_to 'Tipos', kinds_path%></li>
+        <li><%= link_to 'Endereços', addresses_path%></li>
+        <li><%= link_to 'Telefone', phones_path%></li>
+      </ul>
+    </div>
 </div>

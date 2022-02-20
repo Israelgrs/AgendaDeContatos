@@ -1,6 +1,7 @@
 <div class="nested-fields">
   <div class="field">
     <%= form.label :phone %>
-    <%= form.text_field :Phone%>
+    <%= form.text_field :Phone, class: "phone-field" %>
+    <%= link_to_remove_association('remover', form)%>
   </div>
 </div>

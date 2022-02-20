@@ -46,9 +46,12 @@
       <%= render "phone_fields", :form => phones_fields %>
     <%end%>
 
-    <%= link_to_add_association('[Adicionar Telefone]', form, :phones, form_name: 'form', partial: 'phone_fields') %>
+    <div class="field">
+      <%= form.label :phones, "+" %><br>
+      <%= link_to_add_association('[Adicionar Telefone]', form, :phones, form_name: 'form', partial: 'phone_fields') %>
+    </div>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :rmk %>
     <%= form.text_area :rmk %>

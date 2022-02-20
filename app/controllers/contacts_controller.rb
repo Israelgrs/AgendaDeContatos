@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.order(:name).page(params[:page]).per(15)
   end
 
   # GET /contacts/1 or /contacts/1.json
@@ -74,6 +74,6 @@ class ContactsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def contact_params
-    params.require(:contact).permit(:name, :email, :kind_id, :rmk, address_attributes: [:id, :street, :city, :state], phones_attributes: [:id, :phone, :_destroy])
+    params.require(:contact).permit(:name, :email, :kind_id, :rmk, address_attributes: [:id, :street, :city, :state], phones_attributes: [:id, :Phone, :_destroy])
   end
 end

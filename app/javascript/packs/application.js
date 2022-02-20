@@ -11,7 +11,6 @@ import "channels"
 import "cocoon";
 
 require("@nathanvda/cocoon")
-require("cocoon")
 
 Rails.start()
 Turbolinks.start()
