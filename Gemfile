@@ -23,6 +23,8 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
+# i18n for kaminari
+gem 'kaminari-i18n'
 # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
 gem 'faker', '~> 1.6', '>= 1.6.6'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
