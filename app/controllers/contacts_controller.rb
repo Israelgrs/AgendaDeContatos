@@ -4,6 +4,7 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[show edit update destroy]
   before_action :set_options_for_select, only: %i[new edit update create]
+  http_basic_authenticate_with name: 'Israel', password: '12345', only: :destroy
 
   # GET /contacts or /contacts.json
   def index
