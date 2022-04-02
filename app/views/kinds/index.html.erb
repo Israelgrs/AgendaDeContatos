@@ -3,19 +3,18 @@
 
 <h1>Kinds</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Descrição</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @kinds.each do |kind| %>
-      <tr>
+      <tr >
         <td><%= kind.description %></td>
-        <td><%= link_to 'Ver', kind %></td>
         <td><%= link_to 'Editar', edit_kind_path(kind) %></td>
         <td><%= link_to 'Excluir', kind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -25,6 +24,6 @@
 
 <br>
 
-<%= link_to 'Novo tipo', new_kind_path, class:"button" %>
-<%= link_to 'Tela inicial', home_index_path, class:"button" %>
+<%= link_to 'Novo tipo', new_kind_path, class:"btn btn-primary" %>
+<%= link_to 'Tela inicial', home_index_path, class:"btn btn-success" %>
 </div>

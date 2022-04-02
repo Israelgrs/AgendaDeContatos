@@ -2,10 +2,7 @@
 <div class="basic-grey">
   <h1>Seja bem-vindo!</h1>
     <ul>
-      <li><%=link_to 'Contatos', contacts_path%></li>
-      <li><%= link_to 'Tipos', kinds_path%></li>
-      <li><%= link_to 'Endereços', addresses_path%></li>
-      <li><%= link_to 'Telefone', phones_path%></li>
-      <li><%= link_to 'Teste de Ajax', phones_path, remote: true %></li>
+      <li><span><%= image_tag "phone.svg" %> </span> <%=link_to 'Contatos', contacts_path%></li>
+      <li><span><%= image_tag "kinds.svg" %> </span> <%= link_to 'Tipos', kinds_path%></li>
     </ul>
 </div>

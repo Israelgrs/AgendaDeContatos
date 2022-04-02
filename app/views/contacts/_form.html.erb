@@ -35,8 +35,7 @@
     <%end%>
 
     <div class="field">
-      <%= form.label :phones, "+" %><br>
-      <%= link_to_add_association('[Adicionar Telefone]', form, :phones, form_name: 'form', partial: 'phone_fields') %>
+      <%= link_to_add_association("<span><img src='../../assets/phone.svg'> adicionar</span>".html_safe, form, :phones, form_name: 'form', partial: 'phone_fields') %>
     </div>
   </div>
 <br>
@@ -46,8 +45,8 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Enviar", class:"button" %>
-    <%= link_to 'Back', contacts_path, class:"button" %>
+    <%= form.submit "Enviar", class:"btn btn-primary" %>
+    <%= link_to 'Voltar', contacts_path, class:"btn btn-success" %>
   </div>
 
   <% if contact.errors.any? %>
