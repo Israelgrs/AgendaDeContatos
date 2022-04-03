@@ -35,7 +35,7 @@
     <%end%>
 
     <div class="field">
-      <%= link_to_add_association("<span><img src='../../assets/phone.svg'> adicionar</span>".html_safe, form, :phones, form_name: 'form', partial: 'phone_fields') %>
+      <%=link_to_add_association("adicionar telefone", form, :phones, form_name: 'form', partial: 'phone_fields') %>
     </div>
   </div>
 <br>
