@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2021_05_09_221255) do
 
-  create_table "addresses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
     t.string "street"
     t.string "city"
     t.string "state"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_221255) do
     t.index ["contact_id"], name: "index_addresses_on_contact_id"
   end
 
-  create_table "contacts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.bigint "kind_id", null: false
@@ -32,13 +35,13 @@ ActiveRecord::Schema.define(version: 2021_05_09_221255) do
     t.index ["kind_id"], name: "index_contacts_on_kind_id"
   end
 
-  create_table "kinds", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "kinds", force: :cascade do |t|
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "phones", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "phones", force: :cascade do |t|
     t.string "Phone"
     t.bigint "contact_id", null: false
     t.datetime "created_at", precision: 6, null: false
